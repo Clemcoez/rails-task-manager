@@ -1,0 +1,18 @@
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<div class="form-check">
+  <% if @task.completed  %>
+    <input class="form-checkinput" type="checkbox" value="true" id="flexCheckDefault"checked>
+    <label class="form-check-label" for="flexCheckDefault">
+    Completed
+    </label>
+    <% else %>
+    <input class="form-checkinput" type="checkbox" value="true" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
+    Completed
+    </label>
+  <% end %>
+</div>
+<p> <%= link_to "Edit task", edit_task_path %> </p>
+
+<p> <%= link_to "Back to list", tasks_path %> </p>
